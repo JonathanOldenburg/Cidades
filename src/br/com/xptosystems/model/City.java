@@ -13,7 +13,25 @@ public class City {
 	private String microRegion;
 	private String mesoRegion;
 
-	public int getIbgeId() {
+	public City(int ibgeId, String uf, String name, String nameWithoutAccents, String alternativeNames, boolean capital,
+            double lon, double lat, String microRegion, String mesoRegion) {
+        super();
+        this.ibgeId = ibgeId;
+        this.uf = uf;
+        this.name = name;
+        this.nameWithoutAccents = nameWithoutAccents;
+        this.alternativeNames = alternativeNames;
+        this.capital = capital;
+        this.lon = lon;
+        this.lat = lat;
+        this.microRegion = microRegion;
+        this.mesoRegion = mesoRegion;
+    }
+	
+	public City() {
+    }
+	
+    public int getIbgeId() {
 		return ibgeId;
 	}
 	public void setIbgeId(int ibgeId) {
