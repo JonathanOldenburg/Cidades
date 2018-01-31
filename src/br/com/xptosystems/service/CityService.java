@@ -55,4 +55,24 @@ public class CityService {
 
         return Response.status(200).build();
     }
+
+    public Response getCapitals() {
+        try {
+            return Response.status(200).entity(new CityController().getCapitals()).build();
+        } catch (Exception e) {
+            return Response.status(500).entity(e.getMessage()).build();
+        }
+    }
+
+    public Response getStateWithMoreCities() {
+        return Response.status(200).entity(new CityController().getStateWithMoreCities()).build();
+    }
+
+	public Response getStateWithLessCities() {
+		return Response.status(200).entity(new CityController().getStateWithLessCities()).build();
+	}
+
+	public Response getStateInfo(String uf) {
+		return Response.status(200).entity(new CityController().getStateInfo(uf)).build();
+	}
 }
